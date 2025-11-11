@@ -1,0 +1,119 @@
+[gd_scene load_steps=9 format=3 uid="uid://maaasdqitjb3"]
+
+[ext_resource type="Script" uid="uid://tpn14hsk3k8d" path="res://Scenes/game.gd" id="1_3dryh"]
+[ext_resource type="PackedScene" uid="uid://d1b3cog4c8em2" path="res://Scenes/player.tscn" id="2_qxrlw"]
+[ext_resource type="Texture2D" uid="uid://bh5y4lf3qg6p8" path="res://Sprites/New Piskel (3).png" id="2_wowpa"]
+[ext_resource type="PackedScene" uid="uid://phmfg5bq341n" path="res://Scenes/guard.tscn" id="3_wrm1d"]
+[ext_resource type="Script" uid="uid://ler280vjc5ax" path="res://Scenes/win_ui.gd" id="6_i6g32"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_wrm1d"]
+radius = 8.683029
+height = 28.68715
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_3dryh"]
+radius = 59.0
+height = 136.0
+
+[sub_resource type="LabelSettings" id="LabelSettings_1l0tm"]
+font_size = 48
+
+[node name="game" type="Node2D"]
+position = Vector2(-2, 1)
+script = ExtResource("1_3dryh")
+
+[node name="Ground" type="TextureRect" parent="."]
+texture_filter = 1
+offset_left = -1379.0
+offset_top = -593.0
+offset_right = 4745.1626
+offset_bottom = 3524.378
+scale = Vector2(0.6520075, 0.5537676)
+texture = ExtResource("2_wowpa")
+expand_mode = 2
+flip_h = true
+
+[node name="Player" parent="." instance=ExtResource("2_qxrlw")]
+position = Vector2(76, 193)
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Player"]
+position = Vector2(586, 304)
+scale = Vector2(5.182526, 4.6013627)
+shape = SubResource("CapsuleShape2D_wrm1d")
+
+[node name="Camera2D" type="Camera2D" parent="Player"]
+position = Vector2(587, 304)
+position_smoothing_enabled = true
+rotation_smoothing_enabled = true
+
+[node name="Guard" parent="." instance=ExtResource("3_wrm1d")]
+position = Vector2(-144, -114)
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Guard"]
+position = Vector2(245, 203)
+shape = SubResource("CapsuleShape2D_3dryh")
+
+[node name="patrols" type="Node2D" parent="."]
+
+[node name="patrol6" type="Marker2D" parent="patrols"]
+position = Vector2(3377, 703)
+
+[node name="patrol1" type="Marker2D" parent="patrols"]
+position = Vector2(191, 177)
+
+[node name="patrol2" type="Marker2D" parent="patrols"]
+position = Vector2(505, 189)
+
+[node name="patrol3" type="Marker2D" parent="patrols"]
+position = Vector2(840, 173)
+
+[node name="patrol4" type="Marker2D" parent="patrols"]
+position = Vector2(1697, 357)
+
+[node name="patrol5" type="Marker2D" parent="patrols"]
+position = Vector2(2537, 530)
+
+[node name="CanvasModulate" type="CanvasModulate" parent="."]
+color = Color(0, 0, 0, 1)
+
+[node name="WinUI" type="CanvasLayer" parent="." groups=["win_ui"]]
+visible = false
+script = ExtResource("6_i6g32")
+
+[node name="ColorRect" type="ColorRect" parent="WinUI"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.78431374)
+
+[node name="Label" type="Label" parent="WinUI"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -106.0
+offset_top = -33.5
+offset_right = 106.0
+offset_bottom = 33.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "YOU WIN"
+label_settings = SubResource("LabelSettings_1l0tm")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button" type="Button" parent="WinUI"]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -33.0
+offset_top = -154.0
+offset_right = 42.0
+offset_bottom = -123.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "RESTART"

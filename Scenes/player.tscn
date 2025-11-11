@@ -1,0 +1,29 @@
+[gd_scene load_steps=5 format=3 uid="uid://d1b3cog4c8em2"]
+
+[ext_resource type="Script" uid="uid://dii0ehsll37yt" path="res://Scripts/player.gd" id="1_cvnsp"]
+[ext_resource type="Texture2D" uid="uid://bao8i837tj0af" path="res://Sprites/New Piskel (1).png" id="2_6t5aa"]
+[ext_resource type="Texture2D" uid="uid://iltekaslaxcu" path="res://flashlight_gradient_texture_2d.tres" id="3_6t5aa"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_cvnsp"]
+radius = 2.8014603
+height = 12.221569
+
+[node name="Player" type="CharacterBody2D"]
+script = ExtResource("1_cvnsp")
+speed = null
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(580.00006, 329)
+scale = Vector2(10, 10)
+texture = ExtResource("2_6t5aa")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D"]
+position = Vector2(0.5999938, -3)
+scale = Vector2(1.713392, 1.1782448)
+shape = SubResource("CapsuleShape2D_cvnsp")
+
+[node name="PointLight2D" type="PointLight2D" parent="."]
+position = Vector2(584, 304)
+scale = Vector2(6.803907, 6.5665517)
+texture = ExtResource("3_6t5aa")
