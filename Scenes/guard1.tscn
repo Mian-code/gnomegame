@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://1gdl8mjl77ap" path="res://Sprites/New Piskel (5).png" id="2_llv3y"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_cnet1"]
-radius = 40.897644
+radius = 27.361418
 
 [node name="Guard" type="CharacterBody2D"]
 script = ExtResource("1_w6gfn")
@@ -20,7 +20,7 @@ texture = ExtResource("2_llv3y")
 collision_layer = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Vision"]
-position = Vector2(239, 217.00002)
+position = Vector2(238.99998, 213)
 scale = Vector2(-3.1072583, -3.4556115)
 shape = SubResource("CircleShape2D_cnet1")
 debug_color = Color(0.6132583, 0.53798383, 3.85046e-07, 0.41960785)
