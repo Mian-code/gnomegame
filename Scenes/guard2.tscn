@@ -1,0 +1,40 @@
+[gd_scene load_steps=4 format=3 uid="uid://dbnqwlsxyr3v3"]
+
+[ext_resource type="Script" uid="uid://c48j53beycn1a" path="res://Scripts/guard.gd" id="1_vceso"]
+[ext_resource type="Texture2D" uid="uid://1gdl8mjl77ap" path="res://Sprites/New Piskel (5).png" id="2_2md31"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_cnet1"]
+radius = 40.897644
+
+[node name="Guard" type="CharacterBody2D"]
+script = ExtResource("1_vceso")
+patrol_parent_path = NodePath("patrols")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(231.99998, 226.99998)
+scale = Vector2(10, 10)
+texture = ExtResource("2_2md31")
+
+[node name="Vision" type="Area2D" parent="."]
+collision_layer = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Vision"]
+position = Vector2(239, 217.00002)
+scale = Vector2(-3.1072583, -3.4556115)
+shape = SubResource("CircleShape2D_cnet1")
+debug_color = Color(0.6132583, 0.53798383, 3.85046e-07, 0.41960785)
+
+[node name="patrols" type="Node2D" parent="."]
+
+[node name="patrol1" type="Marker2D" parent="patrols"]
+position = Vector2(191, 177)
+
+[node name="patrol2" type="Marker2D" parent="patrols"]
+position = Vector2(505, 189)
+
+[node name="patrol3" type="Marker2D" parent="patrols"]
+position = Vector2(840, 173)
+
+[connection signal="body_entered" from="Vision" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Vision" to="." method="_on_vision_body_exited"]

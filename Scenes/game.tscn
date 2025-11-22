@@ -1,11 +1,14 @@
-[gd_scene load_steps=10 format=3 uid="uid://maaasdqitjb3"]
+[gd_scene load_steps=13 format=3 uid="uid://maaasdqitjb3"]
 
 [ext_resource type="Script" uid="uid://tpn14hsk3k8d" path="res://Scenes/game.gd" id="1_3dryh"]
 [ext_resource type="PackedScene" uid="uid://d1b3cog4c8em2" path="res://Scenes/player.tscn" id="2_qxrlw"]
 [ext_resource type="PackedScene" uid="uid://dtfcdv5ee68g8" path="res://Scenes/goal.tscn" id="2_wowpa"]
 [ext_resource type="Texture2D" uid="uid://bh5y4lf3qg6p8" path="res://Sprites/New Piskel (3).png" id="3_i6g32"]
 [ext_resource type="PackedScene" uid="uid://phmfg5bq341n" path="res://Scenes/guard.tscn" id="3_wrm1d"]
+[ext_resource type="PackedScene" uid="uid://bo38l4mb8dyr2" path="res://Scenes/guard1.tscn" id="4_1l0tm"]
 [ext_resource type="Script" uid="uid://ler280vjc5ax" path="res://Scenes/win_ui.gd" id="6_i6g32"]
+[ext_resource type="PackedScene" uid="uid://dbnqwlsxyr3v3" path="res://Scenes/guard2.tscn" id="8_v158k"]
+[ext_resource type="PackedScene" uid="uid://c45eu1te4poq3" path="res://Scenes/guard3.tscn" id="9_h4fw4"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_wrm1d"]
 radius = 8.683029
@@ -31,7 +34,7 @@ offset_right = 4745.1626
 offset_bottom = 3524.378
 scale = Vector2(0.6520075, 0.5537676)
 texture = ExtResource("3_i6g32")
-expand_mode = 2
+expand_mode = 4
 flip_h = true
 
 [node name="Player" parent="." instance=ExtResource("2_qxrlw")]
@@ -48,7 +51,7 @@ position_smoothing_enabled = true
 rotation_smoothing_enabled = true
 
 [node name="Guard" parent="." instance=ExtResource("3_wrm1d")]
-position = Vector2(-144, -114)
+position = Vector2(-909, -365)
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="Guard"]
 position = Vector2(245, 203)
@@ -119,3 +122,12 @@ offset_bottom = -123.0
 grow_horizontal = 2
 grow_vertical = 0
 text = "RESTART"
+
+[node name="Guard1" parent="." instance=ExtResource("4_1l0tm")]
+position = Vector2(1683, 294)
+
+[node name="Guard2" parent="." instance=ExtResource("8_v158k")]
+position = Vector2(-769, 1345)
+
+[node name="Guard3" parent="." instance=ExtResource("9_h4fw4")]
+position = Vector2(1590, 1984)
