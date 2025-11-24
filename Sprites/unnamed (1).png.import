@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dyq35u1s31yyf"
-path="res://.godot/imported/pixel_art_study___tiles__1_by_misfitoki_deqc368-fullview.jpg-f708e776322226913af8a546717b3788.ctex"
+uid="uid://d8vryiwuwxgl"
+path="res://.godot/imported/unnamed (1).png-b44242d77d7caeb18ce980d5f0cd2000.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/pixel_art_study___tiles__1_by_misfitoki_deqc368-fullview.jpg"
-dest_files=["res://.godot/imported/pixel_art_study___tiles__1_by_misfitoki_deqc368-fullview.jpg-f708e776322226913af8a546717b3788.ctex"]
+source_file="res://Sprites/unnamed (1).png"
+dest_files=["res://.godot/imported/unnamed (1).png-b44242d77d7caeb18ce980d5f0cd2000.ctex"]
 
 [params]
 

@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=3 uid="uid://gs3vc5lhl2t0"]
+
+[ext_resource type="Script" uid="uid://dkxuxnsrww41q" path="res://mobile_controls.gd" id="1_6apxx"]
+
+[node name="MobileControls" type="CanvasLayer"]
+script = ExtResource("1_6apxx")
+
+[node name="MobileUI" type="CanvasLayer" parent="."]
+
+[node name="JoystickBase" type="ColorRect" parent="MobileUI"]
+offset_right = 40.0
+offset_bottom = 40.0
+color = Color(0.24705882, 0.24705882, 0.24705882, 1)
