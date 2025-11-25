@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://tpn14hsk3k8d" path="res://Scenes/game.gd" id="1_3dryh"]
 [ext_resource type="PackedScene" uid="uid://d1b3cog4c8em2" path="res://Scenes/player.tscn" id="2_qxrlw"]
 [ext_resource type="PackedScene" uid="uid://dtfcdv5ee68g8" path="res://Scenes/goal.tscn" id="2_wowpa"]
-[ext_resource type="Texture2D" uid="uid://bpna7maflq478" path="res://Sprites/unnamed_scaled_16x_pngcrushed_scaled_3x_pngcrushed (1).png" id="3_ldgsr"]
+[ext_resource type="Texture2D" uid="uid://duihfoudxtfl" path="res://Sprites/New Piskel (9).png" id="3_ldgsr"]
 [ext_resource type="PackedScene" uid="uid://phmfg5bq341n" path="res://Scenes/guard.tscn" id="3_wrm1d"]
 [ext_resource type="PackedScene" uid="uid://bo38l4mb8dyr2" path="res://Scenes/guard1.tscn" id="4_1l0tm"]
 [ext_resource type="Script" uid="uid://dq2eubfhelr1j" path="res://Scenes/ground.gd" id="4_ldgsr"]
@@ -30,9 +30,9 @@ spawn_area = Rect2(-10, -675, 4000, 2685)
 
 [node name="Ground" type="TextureRect" parent="."]
 texture_filter = 1
-offset_left = -1327.0
+offset_left = -1330.0001
 offset_top = -685.0
-offset_right = 4797.1626
+offset_right = 4794.1626
 offset_bottom = 5439.1626
 scale = Vector2(0.6520075, 0.5537676)
 texture = ExtResource("3_ldgsr")
